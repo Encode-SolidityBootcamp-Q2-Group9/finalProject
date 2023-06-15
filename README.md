@@ -20,11 +20,13 @@ function joinGame() external payable {
             startGame();
         }
     }
-    ```
     
-    ### Instructions Component
+```
     
-    ```
+    
+ ### Instructions Component
+    
+```
     function JoinGame() {
     const { data: signer } = useSigner();
 
@@ -42,12 +44,11 @@ function joinGame() external payable {
         </div>
     );
 }
+```
     
-    ```
+  ## Start Game 
     
-    ## Start Game 
-    
-    ### Contract 
+   ### Contract 
     
     ```
      function startGame() public {
@@ -58,7 +59,7 @@ function joinGame() external payable {
     }
     ```
     
-    ### Instructions Component
+   ### Instructions Component
     
     ```
     function StartGame() {
@@ -121,6 +122,8 @@ function StartNextRound() {
         </div>
     );
 }
+```
+
 
 ## Game Finished
 
@@ -133,8 +136,10 @@ function gameFinished(address _winner) private {
         
     }
 
-    ```
-    
+  ```
+   
+   
+   
    ## Withdraw
    
    ### Contract
@@ -146,12 +151,12 @@ function gameFinished(address _winner) private {
         require(prize > 0, "No prize to withdraw");
         winnerAddress.transfer(prize);
     }
-    ```
-   
+    
+  ```
 
    ### Instructions Component
     
-    ```
+```
     function WinnerWithdraw() {
     const { data: signer } = useSigner();
 
@@ -169,13 +174,17 @@ function gameFinished(address _winner) private {
         </div>
     );
 }
-    ```
-    
-   ## Owner Withdraw
+ 
+ ```
+
+
+
+## Owner Withdraw
    
    
-   ### Contract
-   ```
+ ### Contract
+   
+  ```
    function ownerWithdraw() external {
         require(msg.sender == owner, "Only owner can withdraw");
         require(ownerPool > 0, "No owner pool to withdraw");
